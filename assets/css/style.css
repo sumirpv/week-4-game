@@ -1,0 +1,83 @@
+.img-responsive{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.main{
+    background-color: #99cccc;
+    background-image: url("https://www.transparenttextures.com/patterns/fresh-snow.png");
+}
+
+#h1color{
+    background-color: rgb(202,113,38);
+    width: 65%;
+    height: auto;
+    color: white;
+    padding: 3%;
+
+}
+
+#pcolor{
+    background-color: rgb(251,230,204);
+    color: rgb(91,153,85);
+    padding: 2%;
+    font-size: 24px;
+}
+
+#randnumbercolor{
+background: rgb(92,200,128);
+width:300px;
+height:200px;
+padding: 2%;
+margin: 20px;   
+display: inline-block;
+}
+#woncolor{
+    position: absolute;
+    width:250px;
+    background: rgb(75,252,254);
+    height:200px;    
+    margin: 20px;
+    display: inline-block;
+}
+
+.h2color{
+    position: relative;
+    color: black;
+    padding: 2%;
+}
+#scorecolor{
+    background: rgb(44,162,148);
+    margin: 2%;
+    margin-bottom: 0px;
+}
+
+#score-no-color{
+    background: rgb(44,162,148);
+    margin: 2%;
+    height:200px;
+
+}
+
+@media screen and (max-width: 520px){
+
+    #randnumbercolor{
+        background: rgb(92,200,128);
+        width:200px;
+        height:200px;
+        padding: 2%;
+        margin:0px ;  
+        margin-top: 10px;
+        }
+    #woncolor {
+        position: absolute;
+        background: rgb(75,252,254);
+        width: 300px; 
+        /* height: 200px; */
+        /* padding: 2%; */
+        margin: 0px;
+        margin-top: 10px;
+    }
+    
+    }
