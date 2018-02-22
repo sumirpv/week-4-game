@@ -25,11 +25,30 @@ function reset(){
         console.log("randon number is 4 :" + crystal4);
 }
 
-$(document).ready(function () {
+function won(){
+    $("#total-score-number").text(totalscorenumber);
+    $("#won").text(" YOU WON ");
+    setTimeout(function(){
+     alert("You win");
+     },500);
+     win++;    
+     setTimeout(reset,1000);
+     $("#wins").text(win);
+}
+function loss(){
+    $("#total-score-number").text(totalscorenumber);
+    $("#won").text("YOU LOST");
+    setTimeout(function(){
+        alert("You lost");
+    },500);
+    lost++;
+    setTimeout(reset,1000);
+    $("#losses").text(lost);
+}
 
-  
+$(document).ready(function () {
     //random number btween 19 to 120
-    //console.log("randon number is  :" + randNum);
+
     //display random number in a document
     $("#randnumber").text(randNum);
     $("#total-score-number").text(totalscorenumber);
@@ -43,10 +62,10 @@ $(document).ready(function () {
     console.log("randon number is 4 :" + crystal4);
 });
 
-
+ 
+ 
 $(".crystalClick1").on("click", function() {
-   // check(totalscorenumber);
-  // $("#total-score-number").text(totalscorenumber);
+
 
     if(randNum >totalscorenumber){
         totalscorenumber +=crystal1;
@@ -54,23 +73,10 @@ $(".crystalClick1").on("click", function() {
         console.log("cry1 + total :" + totalscorenumber);
 
         if(randNum === totalscorenumber){
-           // totalscorenumber +=crystal1;
-           $("#total-score-number").text(totalscorenumber);
-           console.log("you won : " + totalscorenumber);
-            alert("You Won");
-            win++;    
-            reset();
-            $("#wins").text(win);
+            won();
         }else if(randNum < totalscorenumber) {
-          //  totalscorenumber +=crystal1;
-        lost++;
-        $("#total-score-number").text(totalscorenumber);
-        console.log("You lost : " +totalscorenumber);
-        alert("You lost better luck next time");
-        reset();
-        $("#losses").text(lost);
+            loss();
         }
-
     }
     
 
@@ -82,22 +88,10 @@ $(".crystalClick2").on("click", function() {
         totalscorenumber +=crystal2;
         $("#total-score-number").text(totalscorenumber);
         if(randNum === totalscorenumber){
-            $("#total-score-number").text(totalscorenumber);
-            alert("You Won");
-            win++;
-            reset();
-            $("#wins").text(win);
-            console.log("YOu won");
+            won();
         }else if(randNum < totalscorenumber) {
-            $("#total-score-number").text(totalscorenumber);
-            alert("You lost better luck next time");
-        lost++;
-        reset();
-        $("#losses").text(lost);
-        console.log("You lost");
+            loss();
         }
-        console.log("cry2 + total :" + totalscorenumber);
-
     }
     
 });
@@ -108,22 +102,10 @@ $(".crystalClick3").on("click", function() {
         totalscorenumber +=crystal3;
         $("#total-score-number").text(totalscorenumber);
         if(randNum === totalscorenumber){
-            $("#total-score-number").text(totalscorenumber);
-            alert("You Won");
-            win++;
-            reset();
-            $("#wins").text(win);
-            console.log("YOu won");
+            won();
         }else if(randNum < totalscorenumber) {
-            $("#total-score-number").text(totalscorenumber);
-            alert("You lost better luck next time");
-        lost++;
-        reset();
-        $("#losses").text(lost);
-        console.log("You lost");
+            loss();
         }
-        console.log("cry3 + total :" + totalscorenumber);
-
     }
     
 });
@@ -135,62 +117,13 @@ $(".crystalClick4").on("click", function() {
         totalscorenumber +=crystal4;
         $("#total-score-number").text(totalscorenumber);
         if(randNum === totalscorenumber){
-            $("#total-score-number").text(totalscorenumber);
-            alert("You Won");
-            win++;
-            reset();
-            $("#wins").text(win);
-            console.log("YOu won");
+            won();
         }else if(randNum < totalscorenumber) {
-            $("#total-score-number").text(totalscorenumber);
-            alert("You lost better luck next time");
-        lost++;
-        reset();
-        $("#losses").text(lost);
-        console.log("You lost");
+            loss();
         }
-        console.log("cry4 + total :" + totalscorenumber);
-
     }
-    
-    // if(randNum === totalscorenumber){
-    //     alert("You Won");
-    //     win++;
-    //     reset();
-    //     $("#wins").text(win);
-    //     console.log("YOu won");
-    // }else if(randNum < totalscorenumber){
-    //     alert("You lost better luck next time");
-    //     lost++;
-    //     reset();
-    //     $("#losses").text(lost);
-    //     console.log("You lost");
-    // }else{
-    //     totalscorenumber +=crystal4;
-    //     $("#total-score-number").text(totalscorenumber);
-    //     console.log("cry4 + total :" + totalscorenumber);
-    // }
+
    
 });
 
 
-//checking if the random nu and total score are equal
-// function check(score){
-//     if(randNum === score){
-//         win++;
-//         $("#wins").text(win);
-//         console.log("YOu won");
-//     }else{
-//         lost++;
-//         $("#losses").text(lost);
-//         console.log("You lost");
-//     }
-// }
-
-//  JQUERY4U = {
-// 	multiply: function(x,y) {
-// 		return (x * y);
-// 	}
-// }
-// //function call
-// JQUERY4U.multiply(2,2);
